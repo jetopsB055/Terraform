@@ -55,9 +55,34 @@ resource "aws_s3_bucket" "s3_bucket" {
   }
 }
 
+# resource "aws_instance" "New_EC2" {
+#   ami                         = data.aws_ami.windows.id
+#   instance_type               = "t2.micro"
+#   availability_zone           = var.availability_zone_names
+#   subnet_id                   = aws_subnet.my_subnet2.id
+#   key_name                    = "win-1"
+#   associate_public_ip_address = true
+
+#   tags = {
+#     Name = "TF-windows"
+#   }
+#   root_block_device {
+#     volume_type = "gp2"
+#     volume_size = 30
+#   }
+# }
+
+# resource "aws_s3_bucket" "s3_bucket" {  
+#   bucket = "worldtrain"
+#   acl    = "public-read-write"
+
+#   tags = {
+#     Name = "worldtrain"
+#   }
+# }
+
 # module "http_80_security_group" {
 #   source  = "./modules/http-80"
 #   name    = var.security_group_id
 #   vpc_id  = aws_vpc.my_vpc.id
 # }
-
