@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 hi this is a new file
+=======
+hi this is a new file
+>>>>>>> parent of 500c260 (test message)
